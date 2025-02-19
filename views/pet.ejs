@@ -1,0 +1,114 @@
+<%- include('partials/_header') %>
+
+
+   <%- include('partials/_navbar') %>
+
+
+      <!-- pet section start -->
+      <div class="menu_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="banner_taital">Our <br><span style="color: #980200;">Pets</span></h1>
+               </div>
+            </div>
+
+            <% pets.results.map(pet=> { %>
+               <div class="menu_section_2">
+                  <div class="row">
+                     <div class="col-md-6 padding_right0">
+                        <div class="menu_box">
+
+                           <h1 class="recipe_text">
+                              <%= pet.category %>
+                                 <br>
+                                 <%= pet.city %> - <%= pet.district %>
+                                       <br>
+                                       <%= pet.number %>
+                                          <br>
+                                          <%= pet.address %>
+                                             <br>
+                                             <%= pet.user.username %>
+                           </h1>
+
+
+                           <div class="manu_main">
+                              <div class="img_1"><img src="<%= pet.image %>">
+                              </div>
+                           </div>
+
+                           <p class="lorem_text">
+                              <%= pet.description %>
+                           </p>
+
+
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <% }) %>
+
+
+         </div>
+      </div>
+
+
+
+
+
+
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="pagination-container d-flex justify-content-center mb-2">
+                  <ul class="pagination">
+
+
+                     <% if ('prev' in pets) { %>
+                        <li class="page-item">
+                           <a class="page-link" href="http://localhost:3000/pet?page=<%= pets.currentPage - 1 %>"
+                              aria-label="Previous">
+                              <span aria-hidden="true" style="color: black;">&laquo;</span>
+                           </a>
+                        </li>
+                        <% } %>
+
+
+                           <% for (let i=1; i<=pets.totalPage; i++) { %>
+                              <li class="page-item">
+                                 <a class="page-link" href="http://localhost:3000/pet?page=<%= i %>">
+                                    <%= i %>
+                                 </a>
+                              </li>
+                              <% } %>
+
+
+                                 <% if ('next' in pets) { %>
+                                    <li class="page-item">
+                                       <a class="page-link"
+                                          href="http://localhost:3000/pet?page=<%= pets.currentPage + 1 %>"
+                                          aria-label="Next">
+                                          <span aria-hidden="true" style="color: black;">&raquo;</span>
+                                       </a>
+                                    </li>
+                                    <% } %>
+
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+
+      <!-- pet section end -->
+
+
+
+
+      <%- include('partials/_footer') %>

@@ -1,0 +1,461 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-search {
+        padding: 15px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+    .logo {
+        text-align: center;
+    }
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .mg {
+        margin: 0px 0px;
+    }
+    .menu-area-main {
+        height: 256px;
+        overflow-y: auto;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        height: 19px;
+    }
+    .category-box.women-box {
+        display: none;
+    }
+    .cart-box {
+        display: inline-block;
+        margin: 0px 30px;
+    }
+    .wish-box {
+        float: none;
+        margin: 0px 30px;
+        display: inline-block;
+    }
+    .menu-add {
+        display: none;
+    }
+    .category-box {
+        display: none;
+    }
+    .mean-container .mean-nav ul li ol {
+        padding: 0px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 10px 20px;
+        width: 94.8%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 92%;
+        padding: 1em 4%;
+    }
+    .mean-container .mean-nav ul li li li a {
+        width: 100%;
+    }
+    .header-search {
+        padding: 15px 0px;
+    }
+    #collapseFilter.d-md-block {
+        padding: 30px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 1em 4%;
+        width: 92%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 90%;
+        padding: 1em 5%;
+    }
+    .mean-container .sub-full.megamenu-categories ol li a {
+        padding: 5px 0px;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
+        width: auto;
+        border: none;
+        float: none;
+    }
+    .menu-area-main {
+        height: 45px;
+        overflow-y: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        right: 0px;
+        top: 30%;
+        left: inherit;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        right: 0px;
+        top: 10%;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 10px;
+    }
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px 130px 0px;
+    }
+    .about_left {
+        width: 10%;
+        float: left;
+    }
+    .about_middle {
+        width: 50%;
+        float: left;
+    }
+    .about_text {
+        width: 100%;
+        font-size: 16px;
+    }
+    .btn_main_1 {
+        width: 26%;
+    }
+    .testimonial_section::before {
+        bottom: -30px;
+        right: 40px;
+    }
+
+    .testimonial_section{
+        background-size: cover;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        right: -20px;
+        top: 57%;
+        left: inherit;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        right: -20px;
+        top: 40%;
+    }
+    .navbar-expand-lg {
+        padding: 15px 0px;
+    }
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
+    }
+    .navbar {
+        padding: 10px 0px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 5px 5px 0px 5px;
+        margin: 0px 0px 0px 0px;
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner_section {
+        background-size: 100% 100%;
+    }
+    .about_left {
+        width: 10%;
+    }
+    .about_middle {
+        width: 50%;
+    }
+    .about_text {
+        width: 100%;
+        font-size: 14px;
+    }
+    .btn_main_1 {
+        width: 35%;
+    }
+    .testimonial_section {
+        background-size: cover;
+    }
+    .testimonial_section::after {
+        width: 150px;
+        height: 100px;
+        top: -50px;
+        left: 20px;
+    }
+    .testimonial_section::before {
+        width: 150px;
+        height: 100px;
+        bottom: -50px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: 175px;
+        top: 90%;
+        display: none;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        left: 236px;
+        top: 90%;
+        display: none;
+    }
+    .header_section {
+        background-size: cover;
+    }
+    .navbar-expand-lg {
+        padding: 15px 0px;
+    }
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
+    }
+    .navbar {
+        padding: 10px 0px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 5px 5px 0px 5px;
+        margin: 0px 0px 0px 0px;
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px 90px 0px;
+    }
+    .banner_taital {
+        font-size: 46px;
+        line-height: 50px;
+    }
+    .about_taital_main {
+        width: 100%;
+        display: block;
+    }
+    .about_left {
+        display: none;
+    }
+    .about_middle {
+        width: 100%;
+    }
+    .about_text {
+        width: 100%;
+    }
+    .about_right {
+        width: 100%;
+        margin-top: 30px;
+    }
+    span.mixer_text {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .rate_text {
+        font-size: 16px;
+    }
+    .btn_main_1 {
+        width: 80%;
+    }
+    .read_text {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    .mail_main {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .testimonial_section {
+        background-size: cover;
+    }
+    .testimonial_taital {
+        font-size: 28px;
+    }
+    .testimonial_text {
+        width: 100%;
+        font-size: 14px;
+    }
+    .testimonial_section::before {
+        width: 150px;
+        height: 100px;
+        bottom: -50px;
+        right: 20px;
+    }
+    .testimonial_section::after {
+        width: 150px;
+        height: 100px;
+        top: -50px;
+        left: 20px;
+    }
+    .social_icon {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+    .location_text li {
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 575px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: 175px;
+        top: 90%;
+        display: none;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        left: 236px;
+        top: 90%;
+        display: none;
+    }
+    .header_section {
+        background-size: cover;
+    }
+    .navbar-expand-lg {
+        padding: 15px 0px;
+    }
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
+    }
+    .navbar {
+        padding: 10px 0px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 5px 5px 0px 5px;
+        margin: 0px 0px 0px 0px;
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px 90px 0px;
+    }
+    .banner_taital {
+        font-size: 46px;
+        line-height: 50px;
+    }
+    .about_taital_main {
+        width: 100%;
+        display: block;
+    }
+    .about_left {
+        display: none;
+    }
+    .about_middle {
+        width: 100%;
+    }
+    .about_text {
+        width: 100%;
+    }
+    .about_right {
+        width: 100%;
+        margin-top: 30px;
+    }
+    span.mixer_text {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .rate_text {
+        font-size: 16px;
+    }
+    .btn_main_1 {
+        width: 80%;
+    }
+    .read_text {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    .mail_main {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .testimonial_section {
+        background-size: cover;
+    }
+    .testimonial_taital {
+        font-size: 28px;
+    }
+    .testimonial_text {
+        width: 100%;
+        font-size: 14px;
+    }
+    .testimonial_section::before {
+        width: 100px;
+        height: 100px;
+        bottom: -70px;
+        right: 20px;
+    }
+    .testimonial_section::after {
+        width: 100px;
+        height: 100px;
+        top: -30px;
+        left: 20px;
+    }
+    .social_icon {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+    .location_text li {
+        padding: 20px 0px 0px 0px;
+    }
+}

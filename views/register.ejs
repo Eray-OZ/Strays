@@ -1,0 +1,42 @@
+<%- include('partials/_header') %>
+
+
+
+    <%- include('partials/_navbar') %>
+
+
+
+
+
+
+        <div class="contact_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="banner_taital" style="color: white;">Register
+                        </h1>
+                    </div>
+                </div>
+                <div class="contact_section_2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mail_section">
+
+                                <form action="/register" method="POST">
+                                    <input type="text" class="mail_text" placeholder="Username" name="username">
+                                    <input type="email" class="mail_text" placeholder="Email" name="email">
+                                    <input type="password" class="mail_text" placeholder="Password" name="password">
+
+                                    <button type="submit" class="btn btn-lg mt-4"
+                                        style="background-color: #980200; color:white;">Register</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <%- include('partials/_footer') %>

@@ -1,0 +1,55 @@
+CHAT-GPT
+
+PROMPT:
+Yanlışsam beni düzelt, bir token oluşturursam bu servera kayıt ediliyor ve bu tokena herhangi bir adresten req kullanarak ulaşabiliyor muyum, bu sistemin nasıl çalıştığını bana anlatır mısın
+
+
+
+
+CEVAP:
+Token tabanlı kimlik doğrulamada (özellikle JWT ile) **token, sunucuda saklanmaz;** bunun yerine istemciye (client) verilir ve istemci bundan sonraki isteklerinde bu token'ı sunucuya gönderir.
+
+---
+
+## Nasıl Çalışır?
+
+1. **Token Oluşturma (Issue):**  
+   - Kullanıcı, örneğin giriş yaptığında sunucu `jwt.sign()` fonksiyonuyla bir token oluşturur.
+   - Bu token, kullanıcının kimliğini veya belirli bilgileri (payload) içerir ve sunucunun gizli anahtarıyla imzalanır.
+   - Token oluşturulduktan sonra sunucu bu token'ı istemciye (örneğin, JSON yanıtı veya cookie olarak) gönderir.
+
+2. **İstemcide Saklama:**  
+   - İstemci, aldığı token'ı genellikle **localStorage, sessionStorage** veya **cookie** gibi yerlerde saklar.
+   - Bu token, her istekle birlikte (genellikle `Authorization` header'ında "Bearer \<token\>" şeklinde) sunucuya gönderilir.
+
+3. **Sunucuda Token Doğrulama:**  
+   - Sunucuya gelen isteklerde, korunan rotalarda bir **middleware** token'ı `req.headers["authorization"]` gibi yollarla alır.
+   - Alınan token, sunucuda imzalama sırasında kullanılan aynı gizli anahtar ile `jwt.verify()` fonksiyonu kullanılarak doğrulanır.
+   - Token geçerliyse, middleware token içindeki bilgileri (örneğin userId) `req.user` gibi bir alana ekleyerek işleme devam eder.
+
+4. **Stateless (Durumsuz) Doğrulama:**  
+   - JWT kullanan sistemler **stateless** olduğu için, token sunucuda saklanmaz.  
+   - Sunucu sadece token'ı doğrular; dolayısıyla token'ı oluşturduktan sonra sunucunun herhangi bir yerinde saklanmış bir kayıt bulunmaz.
+   - Token, geçerli olduğu sürece ve doğru imzaya sahip olduğu sürece, istemci hangi adresten (client uygulamasından) gönderirse gönderilsin sunucu tarafından kabul edilir.
+
+---
+
+## Özetle
+
+- **Token Oluşturulduktan Sonra:**  
+  Token sunucu tarafından oluşturulur, imzalanır ve istemciye gönderilir.  
+- **Sunucuda Saklanmaz:**  
+  Token, sunucuda veri tabanında veya hafızada saklanmaz; her istek geldiğinde istemci token'ı sağlamak zorundadır.
+- **Her İstek İçin:**  
+  İstemci, token'ı `Authorization` header'ı aracılığıyla sunucuya iletir.  
+- **Doğrulama:**  
+  Sunucu token'ı doğrular ve geçerli ise isteğe izin verir.
+
+---
+
+**Güvenlik Notu:**  
+- Token'ı elde eden herhangi biri (örneğin kötü amaçlı bir kullanıcı), geçerli bir token ile istek yapabilir.  
+- Bu yüzden token'ı güvenli bir şekilde saklamak ve HTTPS kullanmak çok önemlidir.  
+- Ayrıca token'ların süresinin dolması (expiresIn) ve gerektiğinde iptal edilebilmesi (blacklist mekanizması gibi) güvenlik açısından önem taşır.
+
+Bu şekilde, token'ı oluşturduğunuzda sunucuda saklanmadığını, istemcinin her istekte bu token'ı sunucuya iletmesi gerektiğini söyleyebiliriz. Herhangi bir adresten, doğru token ile yapılan istek sunucu tarafından doğrulanacaktır.

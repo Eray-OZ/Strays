@@ -1,0 +1,54 @@
+<%- include('partials/_header') %>
+
+
+
+    <%- include('partials/_navbar') %>
+
+
+
+
+        <!-- post ad section start -->
+        <div class="contact_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="banner_taital" style="color: white;">Update
+                        </h1>
+                    </div>
+                </div>
+                <div class="contact_section_2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mail_section">
+
+                                <form action="/update/<%= pet._id%>?_method=PUT" method="POST">
+                                    <input type="text" class="mail_text" value="<%= pet.city %>" name="city">
+                                    <input type="text" class="mail_text" value="<%= pet.district %>" name="district">
+                                    <input type="text" class="mail_text" value="<%= pet.category %>" name="category">
+                                    <textarea class="massage-bt" value="<%= pet.description %>" rows="5"
+                                        id="description" name="description"
+                                        style="color: white;"><%= pet.description %></textarea>
+                                    <input type="text" class="mail_text" value="<%= pet.number %>" name="number">
+                                    <input type="text" class="mail_text" value="<%= pet.address %>" name="address">
+                                    <input type="text" class="mail_text" value="<%= pet.image %>" name="image">
+
+
+                                    <button type="submit" class="btn btn-lg mt-4"
+                                        style="background-color: #980200; color:white;">Submit</button>
+                                </form>
+
+                                <% %>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- post ad section end -->
+
+
+
+
+
+
+
+                    <%- include('partials/_footer') %>

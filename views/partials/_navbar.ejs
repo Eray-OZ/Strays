@@ -1,0 +1,63 @@
+<div class="header_section">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <a class="navbar-brand" href="/">
+                <h1 class="banner_taital" style="color:white;">Strays</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex ml-auto">
+                    <li class="<%= link === 'index' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+
+                    <li class="<%= link === 'pets' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                        <a class="nav-link" href="pet">Adopt</a>
+                    </li>
+
+                    <li class="<%= link === 'find' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                        <a class="nav-link" href="find">Find a Home</a>
+                    </li>
+
+                    <li class="<%= link === 'about' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                        <a class="nav-link" href="about">All About Pets</a>
+                    </li>
+
+                    <% if (!user) { %>
+                        <li class="<%= link === 'register' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                            <a class="nav-link" href="register">Register</a>
+                        </li>
+                        <% } %>
+
+                            <% if (!user) { %>
+                                <li class="<%= link === 'login' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                                    <a class="nav-link" href="login">Login</a>
+                                </li>
+                                <% } %>
+
+                                    <% if (user) { %>
+                                        <li class="<%= link === 'user' ? 'nav-item mx-2 active' : 'nav-item mx-2' %>">
+                                            <a class="nav-link" href="user">User</a>
+                                        </li>
+
+                                        <li class="nav-item mx-2">
+                                            <a class="nav-link" href="logout"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-door-closed"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3zm1 13h8V2H4z" />
+                                                    <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0" />
+                                                </svg> Logout</a>
+                                        </li>
+                                        <% } %>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- header section end -->
